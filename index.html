@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Utheram LLC</title>
+  <meta name="description" content="Utheram LLC builds software for traders and investors. Maker of TradingMentor, the AI trading coach for iPhone." />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="Utheram LLC" />
+  <meta property="og:description" content="Software for traders and investors. Maker of TradingMentor." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://utheram.com/" />
+  <link rel="canonical" href="https://utheram.com/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236B5BD8'/%3E%3Cpath d='M16 5c.9 6.4 4.6 10.1 11 11-6.4.9-10.1 4.6-11 11-.9-6.4-4.6-10.1-11-11 6.4-.9 10.1-4.6 11-11z' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" />
+  <style>
+    /* Layout: one quiet column, left-aligned, generous vertical rhythm.
+       Palette is TradingMentor's: purple accent, cool-tinted neutrals. */
+    :root {
+      --bg: #ffffff;
+      --fg: #0b0c10;
+      --muted: #5f6678;
+      --dim: #8a92a6;
+      --line: #e6e8ef;
+      --accent: #6b5bd8;
+      --accent-ink: #5a4bc4;
+      --font: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #000000;
+        --fg: #ffffff;
+        --muted: #8a92a6;
+        --dim: #5f6678;
+        --line: #202534;
+        --accent: #7c83ff;
+        --accent-ink: #9ca2ff;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: #8a92a6;
+      --dim: #5f6678;
+      --line: #202534;
+      --accent: #7c83ff;
+      --accent-ink: #9ca2ff;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding-inline: 24px;
+      padding-block: 0;
+    }
+
+    /* Header */
+    header {
+      padding-block: 28px 0;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+    .mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+    .mark svg { width: 16px; height: 16px; display: block; }
+
+    /* Intro */
+    .intro {
+      padding-block: 96px 72px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+    .intro p {
+      margin: 20px 0 0;
+      font-size: clamp(18px, 2.6vw, 21px);
+      line-height: 1.5;
+      color: var(--muted);
+      max-width: 30ch;
+      text-wrap: balance;
+    }
+
+    /* Sections */
+    section {
+      border-top: 1px solid var(--line);
+      padding-block: 40px;
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 16px 32px;
+    }
+    section h2 {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dim);
+      padding-top: 4px;
+    }
+    .body { min-width: 0; }
+    .body p { margin: 0; }
+    .body p + p { margin-top: 6px; }
+    .body .note { color: var(--muted); }
+
+    .product {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .product-name {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .product-link {
+      color: var(--accent-ink);
+      font-weight: 500;
+      font-size: 15px;
+      white-space: nowrap;
+      transition: opacity 0.15s ease;
+    }
+    .product-link:hover { opacity: 0.75; }
+    .product-desc {
+      margin-top: 6px !important;
+      color: var(--muted);
+      max-width: 48ch;
+    }
+
+    .contact a {
+      color: var(--fg);
+      border-bottom: 1px solid var(--line);
+      transition: border-color 0.15s ease;
+    }
+    .contact a:hover { border-color: var(--accent); }
+    address { font-style: normal; color: var(--muted); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding-block: 28px 48px;
+      font-size: 13px;
+      color: var(--dim);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 520px) {
+      .intro { padding-block: 72px 56px; }
+      section { grid-template-columns: 1fr; gap: 12px; padding-block: 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/" aria-label="Utheram LLC home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3c1.1 7.6 5.4 11.9 13 13-7.6 1.1-11.9 5.4-13 13-1.1-7.6-5.4-11.9-13-13 7.6-1.1 11.9-5.4 13-13z" fill="#ffffff"/>
+          </svg>
+        </span>
+        Utheram
+      </a>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>Utheram LLC</h1>
+        <p>We build software for traders and investors.</p>
+      </div>
+
+      <section id="products" aria-labelledby="products-h">
+        <h2 id="products-h">Products</h2>
+        <div class="body">
+          <div class="product">
+            <span class="product-name">TradingMentor</span>
+            <a class="product-link" href="https://tradingmentorapp.com" target="_blank" rel="noopener">tradingmentorapp.com &rarr;</a>
+          </div>
+          <p class="product-desc">An AI trading coach for iPhone that grades your real trades and coaches the habits behind them.</p>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-h">
+        <h2 id="contact-h">Contact</h2>
+        <div class="body contact">
+          <!-- EDIT ME: contact email -->
+          <p><a href="mailto:support@tradingmentorapp.com">support@tradingmentorapp.com</a></p>
+          <!-- EDIT ME: business address (replace the placeholder lines) -->
+          <address>
+            <p>Utheram LLC</p>
+            <p>[Street address]</p>
+            <p>[City], [State] [ZIP]</p>
+            <p>United States</p>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="year">2026</span> Utheram LLC. All rights reserved.</span>
+      <span>Registered in the United States.</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
